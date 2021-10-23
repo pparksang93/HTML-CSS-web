@@ -1,0 +1,1078 @@
+:root {
+  --main-color: #d2302f;
+
+/* mainRgba
+ rgba(210, 48, 47) */
+
+  --white-colorOne: #f5f5f5;
+
+  --white-colorTwo: #ffffff;
+
+  --black-colorOne: #818181;
+
+  --black-colorTwo: #000000;
+
+}
+
+body {
+  position: relative;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a, strong {
+  text-decoration: none;
+}
+
+
+
+/* NAV */
+nav {
+  width: 100%;
+  background-color: var(--main-color);
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .nav__wrap {
+  max-width: 70vw;
+  height: 100px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  position: relative;
+}
+
+nav .nav__wrap .nav__leftMenu {
+  width: 18.125em;
+
+}
+
+nav .nav__wrap .nav__leftMenu > span {
+  position:absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%); 
+  font-size: 30px;
+  color: var(--white-colorOne);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+nav .nav__wrap .nav__leftMenu ul {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .nav__wrap .nav__leftMenu ul li {
+  margin-right: 50px;
+}
+
+nav .nav__wrap .nav__leftMenu ul li a span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white-colorOne);
+  font-size: 20px;
+}
+
+nav .nav__wrap .nav__leftMenu ul li a span + p {
+  margin: 0;
+  color: var(--white-colorOne);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+nav .nav__wrap .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -43%);
+}
+
+nav .nav__wrap .logo img {
+  width: 12.500em;
+}
+
+nav .nav__wrap .nav__rightMenu {
+  width: 18.125em;
+  position: relative;
+}
+
+nav .nav__wrap .nav__rightMenu ul {
+  display: flex;
+  line-height: 100px;
+  position: absolute;
+  right: 0;
+}
+
+nav .nav__wrap .nav__rightMenu ul li {
+  font-size: 12px;
+  margin-left: 30px;
+  font-weight: 300;
+}
+
+nav .nav__wrap .nav__rightMenu ul li a {
+  color: var(--white-colorOne);
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  background: url(IMG/MAIN/main.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+}
+
+.mainText__wrap {
+  max-width: 70vw;
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+
+.mainText__wrap::after {
+  content: "";
+  width: 30em;
+  height: 30em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  border: 1px solid var(--white-colorOne);
+}
+
+main .mainText__wrap .mainText {
+  color: var(--white-colorOne);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+main .mainText__wrap .mainText p {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 3px;
+}
+
+main .mainText__wrap .mainText p b {
+  font-weight: 200;
+  letter-spacing: 15px;
+}
+
+main .mainText__wrap .mainText h1 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  position: relative;
+  opacity: 0.9;
+}
+
+main .mainText__wrap .mainText h1::after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 7%;
+  border-radius: 5px;
+  background-color: var(--white-colorOne);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+/* SEARCH */
+.search {
+  max-width: 70vw;
+  width: 100%;
+  display: flex;
+  margin: 100px auto;
+  position: relative;
+}
+
+.search .searchLeft {
+  width: 31.25em;
+  height: 400px;
+  position: relative;
+  background-color:#d62d30;
+  /* border-radius: 0.625em 0 0 0.625em; */
+}
+
+.search .searchLeft .searchLeft__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-colorOne);
+}
+
+.search .searchLeft .searchLeft__text p {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.search .searchLeft .searchLeft__text p + h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+
+.search .searchLeft .searchLeft__text p + h1 span {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--white-colorOne);
+  letter-spacing: 0;
+}
+
+.search .searchRight {
+  width: 56.25em;
+  background: url(IMG/SEARCH/search.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+  /* border-radius: 0 0.625em 0.625em 0; */
+}
+
+.search .searchRight .searchRight__box {
+  width: 37.5em;
+  height: 25em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search .searchRight .searchRight__box .rightBox__one {
+  position: relative;
+}
+
+.search .searchRight .searchRight__box .rightBox__one p {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 4px;
+  width: 100%;
+}
+
+.search .searchRight .searchRight__box .rightBox__one p::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 45px;
+  border-radius: 6px;
+  opacity: 0.8;
+  background-color: var(--white-colorOne);
+}
+
+.search .searchRight .searchRight__box .rightBox__two {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__two
+  input[type="text"] {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__two
+  input[type="text"]::placeholder {
+  padding-left: 30px;
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__two
+  input[type="text"]
+  + input {
+  display: none;
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__two
+  input[type="text"]
+  + input
+  + label
+  span {
+  width: 1.875em;
+  line-height: 1.875em;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  font-size: 1.25em;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.35s;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__two
+  input[type="text"]
+  + input
+  + label
+  span:hover {
+  background-color: var(--main-color);
+  color: var(--white-colorOne);
+}
+
+
+.search
+  .searchRight
+  .searchRight__box .rightBox__three {
+    line-height: 100px;
+    width: 100%;
+  }
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__three
+  p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 100px;
+  color: transparent;
+  -webkit-text-stroke-color: var(--white-colorOne);
+  -webkit-text-stroke-width: 1px;
+  letter-spacing: 4px;
+  transition: all 0.35s;
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__three
+  p::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 45px;
+  border-radius: 6px;
+  opacity: 0.8;
+  background-color: var(--white-colorOne);
+  position: absolute;
+  top: -35%;
+  right: 0;
+}
+
+.search
+  .searchRight
+  .searchRight__box
+  .rightBox__three
+  p:hover {
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0;
+  color: rgba(210, 48, 47, 0.8);
+  transition: all 0.5s;
+}
+
+/* SPECIALPONINT */
+.specialPoint {
+  background-color: var(--white-colorOne);
+  padding: 100px 0;
+  position: relative;
+}
+
+.specialPoint .specialPoint__box {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+
+.specialPoint .specialPoint__box::after {
+  content: "advantage";
+  font-family: "Pacifico", cursive;
+  display: block;
+  font-size: 14rem;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+
+.specialPoint .specialPoint__box > div {
+  z-index: 5;
+  width: 18.75em;
+  height: 25em;
+  position: relative;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.specialPoint .specialPoint__box .pointBox__one {
+  background: linear-gradient(to bottom, #e1eec3 0%, #f05053 100%);
+}
+
+.specialPoint .specialPoint__box .pointBox__one::before {
+  content: "1.";
+  font-size: 8rem;
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: -10%;
+  color: transparent;
+  -webkit-text-stroke-color: var(--white-colorTwo);
+  -webkit-text-stroke-width: 1px;
+  z-index: 1;
+}
+
+.specialPoint .specialPoint__box .pointBox__one img {
+  width: 6.25em;
+  height: 6.25em;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.specialPoint .specialPoint__box .pointBox__one img + .pointBox__oneText {
+  width: 100%;
+  height: 14.375em;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.specialPoint .specialPoint__box .pointBox__one img + .pointBox__oneText p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--white-colorOne);
+}
+
+.specialPoint
+  .specialPoint__box
+  .pointBox__one
+  img
+  + .pointBox__oneText
+  p:nth-child(2) {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 5px;
+}
+
+.specialPoint
+  .specialPoint__box
+  .pointBox__one
+  img
+  + .pointBox__oneText
+  p
+  + p
+  + button {
+  background-color: transparent;
+  width: 7.5em;
+  height: 2.5em;
+  border: 1px solid #f5f5f5;
+  color: var(--white-colorOne);
+  border-radius: 2.5em;
+  padding: 3px;
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.specialPoint .specialPoint__box .pointBox__two {
+  background: linear-gradient(to bottom, #0066eb 0%, #8f94fb 100%);
+}
+
+.specialPoint .specialPoint__box .pointBox__two::before {
+  content: "2.";
+  font-size: 8rem;
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  color: transparent;
+  -webkit-text-stroke-color: var(--white-colorTwo);
+  -webkit-text-stroke-width: 1px;
+  z-index: 1;
+}
+
+.specialPoint .specialPoint__box .pointBox__two img {
+  width: 6.25em;
+  height: 6.25em;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.specialPoint .specialPoint__box .pointBox__two img + .pointBox__twoText {
+  width: 100%;
+  height: 14.375em;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.specialPoint .specialPoint__box .pointBox__two img + .pointBox__twoText p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--white-colorOne);
+}
+
+.specialPoint .specialPoint__box .pointBox__two img + .pointBox__twoText p + p {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.specialPoint
+  .specialPoint__box
+  .pointBox__two
+  img
+  + .pointBox__twoText
+  p
+  + p
+  + button {
+  background-color: transparent;
+  width: 7.5em;
+  height: 2.5em;
+  border: 1px solid #f5f5f5;
+  color: var(--white-colorOne);
+  border-radius: 2.5em;
+  padding: 3px;
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.specialPoint .specialPoint__box .pointBox__three {
+  background: linear-gradient(to bottom, #f2994a 0%, #f2c94c 100%);
+}
+
+.specialPoint .specialPoint__box .pointBox__three::before {
+  content: "3.";
+  font-size: 8rem;
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  color: transparent;
+  -webkit-text-stroke-color: var(--white-colorTwo);
+  -webkit-text-stroke-width: 1px;
+  z-index: 1;
+}
+
+.specialPoint .specialPoint__box .pointBox__three img {
+  width: 6.25em;
+  height: 6.875em;
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.specialPoint .specialPoint__box .pointBox__three img + .pointBox__threeText {
+  width: 100%;
+  height: 14.375em;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.specialPoint .specialPoint__box .pointBox__three img + .pointBox__threeText p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--white-colorOne);
+}
+
+.specialPoint
+  .specialPoint__box
+  .pointBox__three
+  img
+  + .pointBox__threeText
+  p
+  + p {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color:  color: rgba(255, 255, 255, 0.9);
+}
+
+.specialPoint
+  .specialPoint__box
+  .pointBox__three
+  img
+  + .pointBox__threeText
+  p
+  + p
+  + button {
+    background-color: transparent;
+    width: 7.5em;
+    height: 2.5em;
+    border: 1px solid #f5f5f5;
+    color: var(--white-colorOne);
+    border-radius: 2.5em;
+    padding: 3px;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* ABOUT */
+.about {
+  width: 100%;
+  height: 80vh;
+  background: url(IMG/ABOUT/bg.png) no-repeat fixed;
+  background-size: cover;
+  margin-top: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+.about::after {
+  content: '';
+  display: block;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.about .aboutWrap {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .aboutWrap .aboutLeft {
+  position: relative;
+  left: 10%;
+  width: 12.500em;
+}
+
+.about .aboutWrap .aboutLeft p {
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: 15px;
+  color: var(--white-colorOne);
+  text-align: center;
+  position: relative;
+}
+
+
+.about .aboutWrap .aboutRight {
+  color: var(--white-colorOne);
+  position: relative;
+  width: 36%;
+  margin: 0 auto;
+}
+
+.about .aboutWrap .aboutRight ul {
+  position: relative;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) img {
+  margin-bottom: 20px;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) + li {
+  height: 1px;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255 ,0.8);
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) + li + li {
+  color: var(--white-colorOne);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 100px;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) + li + li strong{
+  color: var(--white-colorOne);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) + li + li + li img {
+  width: 27.850em;
+  margin-bottom: 30px;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-child(1) + li + li + li + li {
+  height: 1px;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255 ,0.8);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.about .aboutWrap .aboutRight ul li:nth-last-child(1) {
+color: var(--white-colorOne);
+}
+
+/* ROOM */
+.room {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--white-colorOne);
+}
+
+.roomBox {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+.roomBox .roomTitle {
+  margin: 0 auto;
+}
+
+.roomBox .roomTitle p:nth-child(1) {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--black-colorTwo);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+.roomBox .roomTitle p:nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  position: relative;
+}
+
+.room .roomBox .roomCard {
+  display: flex;
+  justify-content: space-between;
+  margin: 55px 0;
+}
+
+.room .roomBox .roomCard div {
+  width: 18.750em;
+  height: 25.000em;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.room .roomBox .roomCard div ul {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+}
+
+.room .roomBox .roomCard div ul li:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--white-colorTwo);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.room .roomBox .roomCard div ul li:nth-child(2) {
+  width: 3.125em;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--white-colorTwo);
+  margin: 10px auto;
+}
+
+.room .roomBox .roomCard .cardOne {
+  background: url(/IMG/ROOM/hotel.png) no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.room .roomBox .roomCard .cardTwo {
+  background: url(/IMG/ROOM/resort.png);
+  background-size: cover;
+  object-fit: cover;
+}
+
+.room .roomBox .roomCard .cardThree {
+  background: url(/IMG/ROOM/apartment.png) center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+
+.room .roomBox .roomCard .cardFour {
+  background: url(/IMG/ROOM/hostel.png) center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 100px 0;
+}
+
+footer .footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--black-colorTwo);
+  font-size: 13px;
+}
+
+footer .footerContainer img {
+  margin-bottom: 30px;
+}
+
+
+footer .footerContainer ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+footer .footerContainer ul li a {
+  color: var(--black-colorTwo);
+  border-bottom: 1px solid #d2302f;
+}
+
+footer .footerContainer ul li a:nth-child(1) {
+  margin-right: 40px;
+}
+
+footer .footerContainer ul li span {
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(0, -50%);
+  color: var(--main-color);
+}
+
+/* @MEDIA */
+@media (max-width:850px) {
+  /* nav */
+  nav .nav__wrap .nav__leftMenu > span {
+    visibility: visible;
+    margin-left: 30px;
+  }
+
+  nav .nav__wrap .nav__leftMenu {
+    visibility: hidden;
+  }
+
+  nav .nav__wrap .nav__rightMenu {
+    visibility: hidden;
+  }
+
+  /* specialpoint */
+  .specialPoint .specialPoint__box {
+    display: block;
+  }
+
+  .specialPoint .specialPoint__box > div {
+    margin: 20px auto;
+    width: 25.000em;
+  }
+
+  .specialPoint .specialPoint__box::after {
+    font-size: 10rem;
+  }
+
+  /* search */
+  .search {
+    display: block;
+  }
+
+  .search .searchLeft {
+    width: 100%;
+  }
+
+  .search .searchLeft .searchLeft__text p + h1 {
+    font-size: 50px;
+    letter-spacing: 4px;
+  }
+  
+  .search .searchLeft .searchLeft__text p + h1::after {
+    font-size: 120px;
+  }
+  
+  .search .searchLeft .searchLeft__text p + h1 span {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .search .searchRight {
+    width: 100%;
+  }
+
+  .search .searchRight .searchRight__box {
+    position: static;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 20px;
+  }
+
+  .search .searchRight .searchRight__box .rightBox__two {
+    padding: 20px;
+  }
+
+  .search .searchRight .searchRight__box .rightBox__two label {
+    position: relative;
+    right: 1%;
+  }
+
+  .search .searchRight .searchRight__box .rightBox__three {
+    width: 100%;
+    padding-right: 20px;
+    position: absolute;
+    right: 3%;
+    bottom: 4%;
+  }
+
+  /* about */
+  .about {
+    padding: 100px 0 100px 0;
+    height: 100%;
+  }
+
+  .about .aboutWrap {
+    display: block;
+  }
+
+  .about .aboutWrap .aboutLeft {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+  }
+
+  .about .aboutWrap .aboutRight{
+    width: 50%;
+  }
+
+
+
+  /* ROOM */
+  .room {
+    background: url(/IMG/@media.roombg.png) no-repeat;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  .room .roomBox .roomCard {
+    display: block;
+  }
+
+  .room .roomBox .roomCard > div {
+    margin: 30px auto;
+  }
+
+  .room .roomBox .roomCard div ul li:nth-child(1) {
+    font-size: 2.5rem;
+  }
+
+  /* FOOTER */
+  footer .footerContainer ul {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  footer .footerContainer ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+
+
+
+
+
+
+  
+
+} 
